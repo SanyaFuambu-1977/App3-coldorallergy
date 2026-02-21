@@ -51,7 +51,17 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
         function coldAdd(){
             cold_count = cold_count + 1;
         }
+	
+	function showResults(){
+	var total = allergy_count + cold_count;
+	
+	var allergyPercent = (allergy_count / total) * 100;
+	var coldPercent = (cold_count / total) * 100;
 
+	document.getElementById("results").innerHTML =
+	"Allergy: " + allergyPercent + "%<br>" +
+	"Cold: " + coldPercent + "%"; 
+	}
   </script>
 
 
@@ -149,15 +159,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		<a onclick="showResults()" class="w3-btn w3-green w3-round"> Show Results</a>
 	 </div><!-- /content -->
 </div> 
-function showResults(){
-	var total = allergy_count + cold_count;
 	
-	var allergyPercent = (allergy_count / total) * 100;
-	var coldPercent = (cold_count / total) * 100;
 
-	document.getElementById("results").innerHTML =
-	"Allergy: " + allergyPercent + "%<br>" +
-	"Cold: " + coldPercent + "%"; 
 	
 <footer class="w3-bottom w3-container w3-flat-carrot">
 	<p>DIY!</p>
