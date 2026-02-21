@@ -58,7 +58,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	var allergyPercent = (allergy_count / total) * 100;
 	var coldPercent = (cold_count / total) * 100;
 
-	document.getElementById("results").innerHTML =
+	var resultText= document.getElementById("results").innerHTML =
 	"Allergy: " + allergyPercent + "%<br>" +
 	"Cold: " + coldPercent + "%"; 
 	}
@@ -147,8 +147,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
 	<div id="content" class="w3-container">
 		<p>Are your symptoms seasonal or chronic?</p>
-		<a href="#five" onclick="allergyAdd()" class="w3-btn w3-black w3-round">Yes</a>
-		<a href="#five" onclick="coldAdd()" class="w3-btn w3-black w3-round">No</a>
+		<a href="#results" onclick="allergyAdd()" class="w3-btn w3-black w3-round">Yes</a>
+		<a href="#results" onclick="coldAdd()" class="w3-btn w3-black w3-round">No</a>
 	 </div><!-- /content -->
 </div>	
 
@@ -156,7 +156,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	<div class="w3-container w3-flat-carrot">
 		<h1>Your results</h1>
 		<p id="results"></p>
-		<a onclick="showResults()" class="w3-btn w3-green w3-round"> Show Results</a>
+		<button onclick="showResults()" class="w3-btn w3-green w3-round"> Show Results</button>
 	 </div><!-- /content -->
 </div> 
 	
