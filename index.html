@@ -8,6 +8,7 @@ THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.
 Authors in chronological order of contribution:
 Tim Riedel
 Sanya Fuambu
+	 <!-- added my name as an author -->
  
 Further Information:
 http://cns.utexas.edu/fri
@@ -18,6 +19,7 @@ triedel@utexas.edu
  
 Brief Description of Goal of Code:
 I am creating an app that uses a series of yes or no questions to determine if symptoms are more likely due to allergies or a cold.
+	 <!-- Added the describtion for this code -->
  
 Known Issues:
 -Limited to yes or no answers.
@@ -101,7 +103,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at 		Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code 			does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
  	
 	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
-</div> <!-- adding this because it seems to be missing????? -->
+</div> <!-- introduction to the code -->
 	
 <div class="page" id="one">
 	<div id="header" class="w3-container w3-flat-carrot">
@@ -111,8 +113,10 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
     <div id="content" class="w3-container">
 	<p>Are your eyes watery or itchy?</p>    
 	<a href="#two"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a>
+		 <!-- saying yes to this question would indicate that this symptom is more likely caused by allergies -->
          	<a href="#two"  onclick="coldAdd();" class="w3-btn w3-black">No</a>
- </div><!-- /content -->
+		 <!-- saying no to this question would indicate that this symptom is more likely caused by a cold -->
+ </div><!-- question 2 following question 1 -->
 
 </div>
 
@@ -124,8 +128,10 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	<div id="content" class="w3-container">
 		<p>Do you have a fever?</p>
 		<a href="#three" onclick="coldAdd()" class="w3-btn w3-black w3-round">Yes</a>
+		 <!-- Fever suggests a cold so saying yes to this question would indicate that this symptom is more likely caused by a cold -->
 		<a href="#three" onclick="allergyAdd()" class="w3-btn w3-black w3-round">No</a>
-	</div><!-- /content -->
+		 <!-- Fever suggest a cold so saying no to this question would indicate that this symptom is more likely caused by allergies -->
+	</div><!-- question 3 after question 2 -->
 </div>	
 
 <div class="page" id="three">
@@ -136,8 +142,10 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	<div id="content" class="w3-container">
 		<p>Do you have a sore throat?</p>
 		<a href="#four" onclick="coldAdd()" class="w3-btn w3-black w3-round">Yes</a>
+		 <!-- Sore throat suggest a cold so saying yes to this question would indicate that this symptom is more likely caused by a cold -->
 		<a href="#four" onclick="allergyAdd()" class="w3-btn w3-black w3-round">No</a>
-	 </div><!-- /content -->
+		 <!-- saying no to this question would indicate that this symptom is more likely caused by allergies -->
+	 </div><!-- question 4 after question 3 -->
 </div>	
 	
 <div class="page" id="four">
@@ -148,15 +156,20 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	<div id="content" class="w3-container">
 		<p>Are your symptoms seasonal or chronic?</p>
 		<a href="#results" onclick="allergyAdd()" class="w3-btn w3-black w3-round">Yes</a>
+		 <!-- saying yes to this question would indicate that this symptom is more likely caused by allergies -->
 		<a href="#results" onclick="coldAdd()" class="w3-btn w3-black w3-round">No</a>
-	 </div><!-- /content -->
+		 <!-- saying no to this question would indicate that this symptom is more likely caused by a cold -->
+	 </div><!-- all questions answered now results -->
 </div>	
 
 <div class="page" id="results">
 	<div class="w3-container w3-flat-carrot">
 		<h1>Your results</h1>
+		<!-- results that are calculated go here -->
 		<p id="resultsText"></p>
+		<!-- calculates and displays results -->
 		<button onclick="showResults()" class="w3-btn w3-green w3-round"> Show Results</button>
+		
 	 </div><!-- /content -->
 </div> 
 	
